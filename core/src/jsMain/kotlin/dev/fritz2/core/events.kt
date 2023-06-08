@@ -75,6 +75,11 @@ interface WithEvents<out T : EventTarget> {
     val clicks get() = subscribe<MouseEvent>("click")
 
     /**
+     * occurs when a dialog is closed
+     */
+    val closes get() = subscribe<CloseEvent>("close")
+
+    /**
      * occurs when the user right-clicks on an element to open a context menu
      */
     val contextmenus get() = subscribe<MouseEvent>("contextmenu")
