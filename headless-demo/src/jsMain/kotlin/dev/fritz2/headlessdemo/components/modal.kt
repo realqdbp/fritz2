@@ -25,6 +25,7 @@ fun RenderContext.modalDemo() {
             div("flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0") {
                 modalOverlay("fixed inset-0 bg-primary-300 bg-opacity-75 transition-opacity") {
                     transition(
+                        opened,
                         "ease-out duration-300",
                         "opacity-0",
                         "opacity-100",
@@ -45,6 +46,7 @@ fun RenderContext.modalDemo() {
                     | text-left overflow-hidden""".trimMargin()
                 ) {
                     transition(
+                        opened,
                         "ease-out duration-300",
                         "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95",
                         "opacity-100 translate-y-0 sm:scale-100",

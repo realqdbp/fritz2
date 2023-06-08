@@ -30,6 +30,20 @@ class Modal(val renderContext: RenderContext) : RenderContext by renderContext, 
                 }
             }
         }
+        /*dialog {
+            domNode.showModal()
+        }*/
+        /*val dialogNode = dialog {
+            panel?.invoke(this)!!.apply {
+                //trapFocusInMountpoint(restoreFocus, setInitialFocus)
+            }
+            closes handledBy close
+        }.domNode
+
+        opened handledBy {
+            if (it) dialogNode.showModal()
+            else dialogNode.close()
+        }*/
     }
 
     inner class ModalPanel<C : HTMLElement>(
